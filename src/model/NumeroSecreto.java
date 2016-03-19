@@ -67,5 +67,4 @@ public final class NumeroSecreto {
     public boolean esIgual(int numero) {
         return (this.numero == numero);
     }
-    
-}
+    }
