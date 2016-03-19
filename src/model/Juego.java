@@ -10,7 +10,7 @@ package model;
  * @author ewewe
  */
 public class Juego {
-    private NumeroSecreto numeroSecreto;
+    private NumeroSecreto NumeroSecreto;
     private int limiteInferior;
     private int limiteSuperior;
     private int numeroDeIntentos; 
@@ -18,6 +18,7 @@ public class Juego {
     
     private static final int LIM_INF_PREDET = 1;
     private static final int LIM_SUP_PREDET = 100;
+    private final NumeroSecreto numeroSecreto;
     
     public void setRangoDelNumeroSecreto(int limiteInferior, int limiteSuperior) {
       this.limiteInferior = limiteInferior;
@@ -51,13 +52,6 @@ public class Juego {
         int numeroDeIntentosRestantes = this.numeroDeIntentos - this.intentosRealizados;
         return (numeroDeIntentosRestantes);
     }
-    
-     public int getNumeroSecreto(){
-        return this.numeroSecreto.getNumeroSecreto();
-    }
-     
-    
-     
     public String getTextoDeAyuda(int numero) {
         String texto = null;
         if (this.numeroSecreto.esMayor(numero) == true) {
@@ -69,8 +63,7 @@ public class Juego {
         return texto;
     }
 
-    
-     
-    
-    
+   public int getNumeroSecreto() {
+       return this.NumeroSecreto.getNumeroSecreto();
+}
 }
